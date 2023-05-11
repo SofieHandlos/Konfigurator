@@ -1,0 +1,144 @@
+/* ---------- Styling of DesignChoice.js ---------- */
+
+.main-content {
+  margin: 0 24px;
+}
+
+/* Choose color */
+.choosecolor-colordots {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 4px 5px 4px;
+}
+
+.colordot1 {
+  background-color: #000;
+}
+
+.colordot2 {
+  background-color: #b9b9b9;
+}
+
+.colordot3 {
+  background-color: #749d76;
+}
+
+.colordot4 {
+  background-color: #fff;
+  border: 0.5px solid #000;
+}
+
+.colordot5 {
+  background-color: #d6bba0;
+}
+
+.colordot6 {
+  background-color: #cdbeb0;
+}
+
+.colordot7 {
+  background-color: #d8d8d8;
+}
+
+.colordot8 {
+  background-color: #757575;
+}
+
+.colordot9 {
+  background-color: #aa9d94;
+}
+
+/* Productcards */
+.product-card-scroll {
+  display: flex;
+  overflow: scroll;
+  margin-bottom: 100px;
+}
+
+.product-card {
+  background-color: #efefef;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  padding: 24px;
+  margin: 0 20px 0 0;
+}
+
+.product-card img {
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  width: 70px;
+}
+
+.product-details h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.product-details p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.productcard-colordot {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 15px 2px 2px 2px;
+}
+
+.productcard-colordot1 {
+  background-color: #749d76;
+}
+.productcard-colordot2 {
+  background-color: #fff;
+  border: 0.5px solid black;
+}
+.productcard-colordot3 {
+  background-color: #757575;
+}
+
+.productcard-colordot4 {
+  background-color: #000;
+}
+.productcard-colordot5 {
+  background-color: #d0d0d0;
+}
+/* ------------------- */
+
+/* Responsive for tablet and desktop */
+@media (min-width: 769px) {
+  .product-card-scroll {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 24px;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  .product-card {
+    background-color: #efefef;
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    padding: 24px;
+    margin: 0;
+  }
+
+  .product-card img {
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    width: 120px;
+  }
+
+  .next-previous-buttons {
+    position: fixed;
+    width: 30%;
+  }
+}
