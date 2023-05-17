@@ -8,10 +8,12 @@ import "../stylingsheets/DesignChoice.css";
 
 export default function DesignChoice() {
   return (
-    <div className="main-content">
+    // Main indeholder al content på designsiden
+    <main className="main-content">
       <h4>Step 1/7</h4>
+      {/* Farvedots */}
       <div>
-        <h2>Vælg farve</h2>
+        <h2>Filtrér efter farve</h2>
         <span class="choosecolor-colordots colordot1"></span>
         <span class="choosecolor-colordots colordot2"></span>
         <span class="choosecolor-colordots colordot3"></span>
@@ -22,8 +24,10 @@ export default function DesignChoice() {
         <span class="choosecolor-colordots colordot8"></span>
         <span class="choosecolor-colordots colordot9"></span>
       </div>
+
       <h2>Vælg design</h2>
-      <div className="product-card-scroll">
+      {/* Produktkort */}
+      <section className="product-card-scroll">
         <div className="product-card">
           <img className="" src={Ombra} alt="bathdesign"></img>
           <div className="product-details">
@@ -85,7 +89,7 @@ export default function DesignChoice() {
             <span class="productcard-colordot productcard-colordot5"></span>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }

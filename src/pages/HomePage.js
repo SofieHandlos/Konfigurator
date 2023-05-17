@@ -7,7 +7,9 @@ import HandelesChoice from "./HandlesChoice";
 import ArmatureChoice from "./ArmatureChoice";
 import AccessoriesChoice from "./AccessoriesChoice";
 
+// Her eksporteres funktionen "HomePage", som er det primære komponent
 export default function HomePage() {
+  // Her oprettes forskellige hooks vha. "useState" til at styre aktive valg og tilstanden for "collapsed" knappen
   const [collapsed, setCollapsed] = useState(false);
   const [active, setActive] = useState("choice-active");
   const [activetwo, setActiveTwo] = useState("choice");
@@ -17,10 +19,13 @@ export default function HomePage() {
   const [activesix, setActiveSix] = useState("choice");
   const [activeseven, setActiveSeven] = useState("choice");
 
+  // Denne funktion inverterer værdien af "collapsed" hver gang knappen klikkes på
   const handleToggle = () => {
     setCollapsed(!collapsed);
   };
 
+  // Her er der en række funktioner, som håndterer klik på hvert enkelt valg i navigationen
+  // Hver funktion opdaterer "active" state og de resterende valg states til deres oprindelige tilstand
   const handleActiveChoice = () => {
     setActive("choice-active");
     setActiveTwo("choice");
@@ -91,11 +96,13 @@ export default function HomePage() {
     setActiveSeven("choice-active");
   };
 
+  // Her returneres HTML for vores komponent
+  // Det første div-element opdateres med "collapsed" class afhængigt
   return (
     <>
-      <div className={`tabbar ${collapsed ? "collapsed" : ""}`}>
+      <main className={`tabbar ${collapsed ? "collapsed" : ""}`}>
         <div className="horizontal-scroll-line" onClick={handleToggle}></div>
-        <div className="nav">
+        <nav className="nav">
           <div className="navigationbar">
             <h1 className={active} onClick={handleActiveChoice}>
               Design
@@ -123,8 +130,9 @@ export default function HomePage() {
             <h3 className="previous-button">Forrige</h3>
             <h3 className="next-button">Næste</h3>
           </div>
-        </div>
+        </nav>
 
+        {/* Viser DesignChoice komponenten hvis active er "choice-active" */}
         {active === "choice-active" && <DesignChoice />}
         {activetwo === "choice-active" && <SizeChoice />}
         {activethree === "choice-active" && <DoorsDrawersChoice />}
@@ -132,7 +140,7 @@ export default function HomePage() {
         {activefive === "choice-active" && <SinkChoice />}
         {activesix === "choice-active" && <ArmatureChoice />}
         {activeseven === "choice-active" && <AccessoriesChoice />}
-      </div>
+      </main>
     </>
   );
 }

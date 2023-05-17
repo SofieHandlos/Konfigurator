@@ -1,4 +1,4 @@
-/* Productcards */
+/* Produktkort */
 .product-card-container-step3 {
   display: flex;
 }
@@ -27,4 +27,11 @@
   font-size: 14px;
   color: #666;
   margin: 0;
+}
+
+/* Responsiv på tablet og computer */
+@media (min-width: 769px) {
+  .product-card-step3 img {
+    width: 120px;
+  }
 }

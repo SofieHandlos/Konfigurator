@@ -2,9 +2,11 @@ import "../stylingsheets/SizeChoice.css";
 
 export default function SizeChoice() {
   return (
+    // Main indeholder al content på størrelsessiden
     <div className="main-content">
       <h4>Step 2/7</h4>
       <div>
+        {/* Størrelsesknapper */}
         <h2>Vælg bredde</h2>
         <div className="size-button-container">
           <h2 className="size-button">60cm</h2>

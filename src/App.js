@@ -7,13 +7,15 @@ import HomePage from "./pages/HomePage";
 function App() {
   return (
     <>
-      <div className="main">
+      {/* Main content */}
+      <main className="main">
         <div className="homepage-buttons">
           <div className="full-price">
             <h3>Pris</h3>
             <h1>13.000 kr.</h1>
           </div>
 
+          {/* Nulstil og gem knapper */}
           <div className="reset-save-button-container">
             <div>
               <img
@@ -25,6 +27,7 @@ function App() {
             <h3 className="save-button">Gem</h3>
           </div>
 
+          {/* Ordreliste knap */}
           <div className="orderlist-button-container">
             <div className="order-list-button">
               <img
@@ -38,16 +41,18 @@ function App() {
           </div>
         </div>
         <div>
+          {/* Konfigurationsbillede */}
           <img
             className="configuration-image"
             src={BathConfiguration}
             alt="configurationimage"
           ></img>
         </div>
+        {/* Routes til HomePage*/}
         <Routes>
           <Route path="/" element={<HomePage />} />
         </Routes>
-      </div>
+      </main>
     </>
   );
 }

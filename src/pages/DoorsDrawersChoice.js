@@ -4,10 +4,12 @@ import "../stylingsheets/DoorsDrawersChoice.css";
 
 export default function DoorsDrawersChoice() {
   return (
-    <div className="main-content">
+    // Main indeholder al content på skuffer/låger
+    <main className="main-content">
       <h4>Step 3/7</h4>
       <h2>Vælg skuffer eller låger</h2>
-      <div className="product-card-container-step3">
+      {/* Produktkort */}
+      <section className="product-card-container-step3">
         <div className="product-card-step3">
           <img className="" src={Drawers} alt="design with drawers"></img>
           <div className="product-details-step3">
@@ -22,7 +24,7 @@ export default function DoorsDrawersChoice() {
             <h4>+ 199 kr.</h4>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }

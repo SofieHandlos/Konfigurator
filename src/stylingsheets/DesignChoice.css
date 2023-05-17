@@ -1,10 +1,9 @@
-/* ---------- Styling of DesignChoice.js ---------- */
-
 .main-content {
-  margin: 0 24px;
+  padding: 0 24px;
+  background-color: #fff;
 }
 
-/* Choose color */
+/* Farvedots til at vælge farve */
 .choosecolor-colordots {
   height: 25px;
   width: 25px;
@@ -50,7 +49,7 @@
   background-color: #aa9d94;
 }
 
-/* Productcards */
+/* Produktkort */
 .product-card-scroll {
   display: flex;
   overflow: scroll;
@@ -108,9 +107,8 @@
 .productcard-colordot5 {
   background-color: #d0d0d0;
 }
-/* ------------------- */
 
-/* Responsive for tablet and desktop */
+/* Responsiv på tablet og computer */
 @media (min-width: 769px) {
   .product-card-scroll {
     display: grid;
@@ -120,6 +118,7 @@
     overflow-y: scroll;
     overflow-x: hidden;
     width: 100%;
+    padding-bottom: 120px;
   }
 
   .product-card {
